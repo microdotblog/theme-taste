@@ -1,0 +1,16 @@
+{{ define "main" }}
+    <main class="gh-main">
+        <article class="gh-article">
+            <header class="gh-article-header gh-canvas">
+                <span class="gh-article-meta">
+                    <time class="gh-article-meta-date" datetime="{{ .Date.Format "2006-01-02 15:04:05 -0700" }}">{{ .Date.Format "Jan 2, 2006" }}</time>
+                </span>
+
+                <h1 class="gh-article-title">{{ .Title }}</h1>
+            </header>
+            <section class="gh-content gh-canvas">
+                {{ .Content }}
+            </section>
+        </article>
+    </main>
+{{ end }}

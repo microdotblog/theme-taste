@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "title": "Taste theme",
+  "description": "An elegant, minimalist Micro.blog theme.",
+  "fields": [
+    {
+      "field": "params.taste_use_elegant_style",
+      "label": "Use elegant style",
+      "type": "boolean"
+    },
+    {
+      "field": "params.taste_background_color",
+      "label": "Background color",
+      "type": "color"
+    }
+  ]
+}

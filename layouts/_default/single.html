@@ -1,0 +1,12 @@
+{{ define "main" }}
+    <main class="gh-main">
+        <article class="gh-article">
+            <header class="gh-article-header gh-canvas">
+                <h1 class="gh-article-title">{{ .Title }}</h1>
+            </header>
+            <section class="gh-content gh-canvas">
+                {{ .Content }}
+            </section>
+        </article>
+    </main>
+{{ end }}
