@@ -6,7 +6,7 @@
                 <h1 class="gh-header-primary">{{ .Site.Title }}</h1>
                 <p class="gh-header-secondary">{{ .Site.Params.Description | safeHTML }}</p>
                 {{ if .Site.Params.taste_show_newsletter_on_homepage }}
-                    <form method="post" action="https://micro.blog/users/subscribe/na">
+                    <form method="post" action="https://micro.blog/users/subscribe/{{ .Site.Params.site_id }}">
                       <input type="email" name="email" size="30" placeholder="{{ T "email_placeholder" }}" required>
                       <button>{{ T "subscribe" }}</button>
                     </form>
