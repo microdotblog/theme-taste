@@ -4,6 +4,11 @@
   "description": "An elegant, minimalist Micro.blog theme.",
   "fields": [
     {
+      "field": "params.taste_background_color",
+      "label": "Background color",
+      "type": "color"
+    },
+    {
       "field": "params.taste_use_elegant_style",
       "label": "Use elegant style",
       "type": "boolean"
@@ -12,11 +17,6 @@
       "field": "params.taste_show_newsletter_on_homepage",
       "label": "Show subscribe to newsletter on homepage",
       "type": "boolean"
-    },
-    {
-      "field": "params.taste_background_color",
-      "label": "Background color",
-      "type": "color"
     }
   ]
 }
