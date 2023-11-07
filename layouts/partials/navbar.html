@@ -7,7 +7,7 @@
 					{{ .Site.Title }} <!-- TODO: support for image logo? -->
 				</a>
 			</div>
-			<button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{- partial "icons/search.html" -}}</button>
+			{{ partial "search-link.html" . }}
 			<button class="gh-burger"></button>
 		</div>
 
@@ -24,7 +24,7 @@
 		</nav>
 
 	<div class="gh-head-actions">
-		<button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{- partial "icons/search.html" -}}</button>
+		{{ partial "search-link.html" . }}
 	</div>
 	</div>
 </header>

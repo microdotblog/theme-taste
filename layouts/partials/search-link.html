@@ -1,0 +1,3 @@
+{{ with or (.GetPage "/search") (.GetPage "/search-space") }}
+	<a href="{{ .Permalink }}" class="gh-search gh-icon-btn" aria-label="{{ T "search" }}">{{- partial "icons/search.html" -}}</a>
+{{ end }}
