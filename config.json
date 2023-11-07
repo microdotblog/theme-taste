@@ -1,6 +1,7 @@
 {
   "params": {
     "taste_background_color": "#f9f6ea",
-    "taste_use_elegant_style": true
+    "taste_use_elegant_style": true,
+    "taste_show_newsletter_on_homepage": true
   }
 }

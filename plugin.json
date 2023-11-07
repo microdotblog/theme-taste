@@ -9,6 +9,11 @@
       "type": "boolean"
     },
     {
+      "field": "params.taste_show_newsletter_on_homepage",
+      "label": "Show subscribe to newsletter on homepage",
+      "type": "boolean"
+    },
+    {
       "field": "params.taste_background_color",
       "label": "Background color",
       "type": "color"
