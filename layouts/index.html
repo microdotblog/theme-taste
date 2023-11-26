@@ -1,33 +1,31 @@
 {{ define "main" }}
-	{{ .Content }}
-	<section class="gh-header gh-outer">
-		<div class="gh-header-inner gh-inner">
-			<div class="gh-header-content">
-				<h1 class="gh-header-primary">{{ .Site.Title }}</h1>
-				<p class="gh-header-secondary">{{ .Site.Params.Description | safeHTML }}</p>
-				{{ if .Site.Params.taste_show_newsletter_on_homepage }}
-					<form method="post" action="https://micro.blog/users/subscribe/{{ .Site.Params.site_id }}">
-							<input type="email" name="email" size="30" placeholder="{{ T "email_placeholder" }}" required>
-							<button>{{ T "subscribe" }}</button>
-					</form>
-				{{ end }}
-		</div>
-	</section>
+	<main class="gh-main">
+		{{ .Content }}
+		<section class="gh-header gh-outer">
+			<div class="gh-header-inner gh-inner">
+				<div class="gh-header-content">
+					<h1 class="gh-header-primary">{{ .Site.Title }}</h1>
+					<p class="gh-header-secondary">{{ .Site.Params.Description | safeHTML }}</p>
+					{{ if .Site.Params.taste_show_newsletter_on_homepage }}
+						<form method="post" action="https://micro.blog/users/subscribe/{{ .Site.Params.site_id }}">
+								<input type="email" name="email" size="30" placeholder="{{ T "email_placeholder" }}" required>
+								<button>{{ T "subscribe" }}</button>
+						</form>
+					{{ end }}
+			</div>
+		</section>
 
-	<ul id="post-list" class="h-feed">
+		<ul id="post-list" class="h-feed">
 
-	{{ if or .IsHome .Site.Params.paginate_categories }}
-		{{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") }}
-		{{ $list := $paginator.Pages }}
-		{{ range $list  }}
-			{{ partial "list-item.html" . }}
+		{{ if or .IsHome .Site.Params.paginate_categories }}
+			{{ $paginator := .Paginate (where .Site.Pages.ByDate.Reverse "Type" "post") }}
+			{{ $posts := $paginator.Pages }}
+			{{ partial "list.html" $posts }}
+		{{ else }}
+			{{ $posts := where .Site.Pages.ByDate.Reverse "Type" "post" }}
+			{{ partial "list.html" . }}
 		{{ end }}
-	{{ else }}
-		{{ $list := where .Site.Pages.ByDate.Reverse "Type" "post" }}
-		{{ range $list  }}
-			{{ partial "list-item.html" . }}
-		{{ end }}
-	{{ end }}
 
-	</ul>
+		</ul>
+	</main>
 {{ end }}

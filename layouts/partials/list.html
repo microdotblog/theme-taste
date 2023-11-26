@@ -1,0 +1,9 @@
+<div class="gh-list grid magazine gh-outer">
+	<div class="gh-list-inner gh-inner">
+		<div class="gh-list-feed gh-feed">
+			{{ range .  }}
+				{{ partial "list-item.html" . }}
+			{{ end }}
+		</div>
+	</div>
+</div>
